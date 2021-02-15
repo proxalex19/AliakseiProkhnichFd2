@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anketa</title>
+</head>
+<body>
+    <script>
+        var lastName = prompt('введите вашу фамилию');
+
+        while(!isNaN(lastName)){
+            var lastName = prompt('корректно введите вашу фамилию');
+        }
+        var name = prompt('введите ваше имя');
+        while(!isNaN(name)){
+            var name = prompt('корректно введите ваше имя');
+        }
+        var patron = prompt('введите ваше отчество');
+        while(!isNaN(patron)){
+            var patron = prompt('корректно введите ваше отчество');
+        }
+        var age = parseInt(prompt('введите ваш возраст'));
+
+        while(isNaN(age)){
+            var age = parseInt(prompt('корректно введите ваш возраст'));
+        }
+        var a= 'вы еще не на пенсии';
+        var gender = confirm('вы женщина?');
+        if(gender){
+            genderAnswer="Ж";
+        }else
+            genderAnswer="M";
+        if((gender)&&(age>=57)){
+            var a = 'да, вы на пенсии';
+        }else if((!gender)&&(age>=63)){
+            var a = 'да, вы на пенсии';
+        }
+        alert(
+            'ваше ФИО: ' + lastName + ' ' + name + ' ' + patron + '\n' +
+            'ваш возраст в годах: ' + ' ' + age + '\n' +
+            'ваш возраст в днях: ' + (age * 365) + '\n' +
+            'через 5  лет вас будет: ' + (age + 5) + '\n' +
+            'ваш пол: ' + genderAnswer + '\n' +
+            'вы на пенсии: ' + a
+        )
+    </script>
+</body>
+</html>
