@@ -1,0 +1,5 @@
+#circl { stroke-width: 1px; stroke: #FCCA66; fill: #FCCA66;}
+#hour, #min, #sec { stroke-width: 1px; fill: #00ff15; stroke: black; stroke-linejoin: round }
+#sec { stroke: #ff0000; }
+#elem { width:50%; margin:0 auto; }
+.number{ font-size: 0.3em; fill: #000}

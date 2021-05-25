@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type=button value='корни' onclick='getNum()'>
+    
+
+    <script>
+
+        "use strict";
+
+        
+        function sqroots(a, b, c) {
+            let d = b * b - 4 * a * c; 
+            if (d < 0)
+                return []; 
+
+            if (d == 0)
+                return [-b / (2 * a)]; 
+
+                let x1 = (-b + Math.sqrt(d)) / (2 * a);
+                let x2 = (-b - Math.sqrt(d)) / (2 * a);
+            return [x1, x2]; 
+        }
+
+        
+        function getNum() {
+            let a = Number(prompt("Введите a"));
+            let b = Number(prompt("Введите b"));
+            let c = Number(prompt("Введите c"));
+            let roots = sqroots(a, b, c);
+
+            if (!roots.length)
+                alert("нет корней");
+            else if (roots.length == 1)
+                alert("один корень: " + roots[0]);
+            else
+                alert("два корня: " + roots[0] + " , " + roots[1]);
+        }
+
+    </script>
+</body>
+
+</html>

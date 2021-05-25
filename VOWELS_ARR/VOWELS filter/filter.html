@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict"
+
+        function countVowels(str) {
+            str = str.toLowerCase().split("");
+
+            var vowels = "ауоыиэяюёе";
+
+            return str.filter(function (value, index, arr) {
+                var letter = String(arr[index]);
+
+                return (vowels.indexOf(letter) !== -1) ? letter : null;
+            }).length;
+        }
+
+        var str = prompt("Напиши строку на русском");
+
+        console.log(countVowels(str));
+
+    </script>
+
+</body>
+
+</html>

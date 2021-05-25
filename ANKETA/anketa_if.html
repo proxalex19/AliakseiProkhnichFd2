@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANKETA</title>
+</head>
+
+<body>
+
+    <script>
+        "use strict";
+
+        let surname = prompt('Укажите вашу фамилию');
+        let name = prompt('Укажите ваше имя');
+        let secondname = prompt('Укажите ваше отчество');
+        let age = parseInt(prompt('Укажите ваш возраст числом'));
+        let gender = confirm('Вы мужик?');
+        let pension = 'нет';
+
+
+
+        if (gender === true) {
+            gender = 'мужской';
+            if (age >= 65) {
+                pension = 'да';
+            }
+        } else {
+            gender = 'женский';
+            if (age >= 60) {
+                pension = 'да';
+            }
+        }
+
+
+        alert('ваше ФИО: ' + surname + ' ' + name + ' ' + secondname + '\n' +
+            'ваш возраст в годах: ' + age + '\n' +
+            'ваш возраст в днях: ' + (age * 365) + '\n' +
+            'через 5 лет вам будет: ' + (age + 5) + '\n' +
+            'ваш пол: ' + gender + '\n' +
+            'вы на пенсии: ' + pension);
+
+
+
+
+    </script>
+
+</body>
+
+</html>
